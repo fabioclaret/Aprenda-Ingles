@@ -1,9 +1,13 @@
 package android.fabio.aprendaingles;
 
+import android.content.Intent;
 import android.fabio.aprendaingles.fragments.BichosFragment;
 import android.fabio.aprendaingles.fragments.NumerosFragment;
 import android.fabio.aprendaingles.fragments.VogaisFragment;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     private SmartTabLayout smartTabLayout;
     private ViewPager viewPager;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,4 +52,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
 }

@@ -3,7 +3,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.NumerosFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#f5e9b9"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <ImageButton android:id="@+id/btnOne"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/um"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton android:id="@+id/btnTwo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/dois"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton android:id="@+id/btnThree"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/tres"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/btnOne"/>
+
+    <ImageButton android:id="@+id/btnFour"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/quatro"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btnTwo" />
+
+    <ImageButton android:id="@+id/btnFive"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/cinco"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/btnThree" />
+
+    <ImageButton android:id="@+id/btnSix"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/seis"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btnFour" />
 
 
 
