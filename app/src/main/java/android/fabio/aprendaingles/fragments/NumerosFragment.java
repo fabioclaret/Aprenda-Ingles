@@ -1,5 +1,6 @@
 package android.fabio.aprendaingles.fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,16 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.fabio.aprendaingles.R;
+import android.widget.ImageButton;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link NumerosFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class NumerosFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+public class NumerosFragment extends Fragment implements View.OnClickListener {
+    private ImageButton btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix;
+    private MediaPlayer mediaPlayer;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -60,6 +56,57 @@ public class NumerosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_numeros, container, false);
+        View view = inflater.inflate(R.layout.fragment_numeros, container, false);
+        btnOne = view.findViewById(R.id.btnA);
+        btnTwo = view.findViewById(R.id.btnE);
+        btnThree = view.findViewById(R.id.btnI);
+        btnFour = view.findViewById(R.id.btnO);
+        btnFive = view.findViewById(R.id.btnU);
+        btnSix = view.findViewById(R.id.btnPlus);
+
+        btnOne.setOnClickListener(this);
+        btnTwo.setOnClickListener(this);
+        btnThree.setOnClickListener(this);
+        btnFour.setOnClickListener(this);
+        btnFive.setOnClickListener(this);
+        btnSix.setOnClickListener(this);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if (id == R.id.btnA) {
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.one);
+            playSound();
+        } else if (id == R.id.btnE) {
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.two);
+            playSound();
+        }else if (id == R.id.btnI) {
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.three);
+            playSound();
+        }else if (id == R.id.btnO) {
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.four);
+            playSound();
+        }else if (id == R.id.btnU) {
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.five);
+            playSound();
+        }else if (id == R.id.btnPlus) {
+            mediaPlayer = MediaPlayer.create(getContext(), R.raw.six);
+            playSound();
+        }
+    }
+
+    public void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayerp) {
+                    mediaPlayer.release();
+                }
+            });
+        }
     }
 }

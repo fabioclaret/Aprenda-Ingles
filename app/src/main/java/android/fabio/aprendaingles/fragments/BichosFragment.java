@@ -72,7 +72,7 @@ public class BichosFragment extends Fragment implements View.OnClickListener{
 
         return view;
 
-    }
+        }
 
     @Override
     public void onClick(View v) {
@@ -103,7 +103,7 @@ public class BichosFragment extends Fragment implements View.OnClickListener{
             mediaPlayer.start();
             mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
-                public void onCompletion(MediaPlayer mp) {
+                public void onCompletion(MediaPlayer mediaPlayerp) {
                     mediaPlayer.release();
                 }
             });

@@ -22,7 +22,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.87" />
 
-    <ImageButton android:id="@+id/btnOne"
+    <ImageButton android:id="@+id/btnA"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/um"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton android:id="@+id/btnTwo"
+    <ImageButton android:id="@+id/btnE"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/dois"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton android:id="@+id/btnThree"
+    <ImageButton android:id="@+id/btnI"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/tres"
@@ -50,9 +50,9 @@
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/btnOne"/>
+        app:layout_constraintTop_toBottomOf="@id/btnA"/>
 
-    <ImageButton android:id="@+id/btnFour"
+    <ImageButton android:id="@+id/btnO"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/quatro"
@@ -60,9 +60,9 @@
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/btnTwo" />
+        app:layout_constraintTop_toBottomOf="@id/btnE" />
 
-    <ImageButton android:id="@+id/btnFive"
+    <ImageButton android:id="@+id/btnU"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/cinco"
@@ -70,9 +70,9 @@
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/btnThree" />
+        app:layout_constraintTop_toBottomOf="@id/btnI" />
 
-    <ImageButton android:id="@+id/btnSix"
+    <ImageButton android:id="@+id/btnPlus"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/seis"
@@ -80,7 +80,7 @@
         android:scaleType="centerCrop"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/btnFour" />
+        app:layout_constraintTop_toBottomOf="@id/btnO" />
 
 
 

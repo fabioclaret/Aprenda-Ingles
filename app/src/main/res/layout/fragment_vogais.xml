@@ -3,7 +3,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.VogaisFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#f5e9b9"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <ImageButton android:id="@+id/btnA"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/a"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton android:id="@+id/btnE"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/e"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton android:id="@+id/btnI"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/i"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/btnA"/>
+
+    <ImageButton android:id="@+id/btnO"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/o"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btnE" />
+
+    <ImageButton android:id="@+id/btnU"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/u"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/btnI" />
+
+    <ImageButton android:id="@+id/btnSurprise"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/surprise"
+        android:layout_marginTop="82dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/btnO" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
